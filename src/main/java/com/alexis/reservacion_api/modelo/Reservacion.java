@@ -1,6 +1,8 @@
 package com.alexis.reservacion_api.modelo;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -15,6 +17,7 @@ public class Reservacion{
     private int mesa;
     private LocalDate fecha;
     private LocalTime hora;
+    @Enumerated(EnumType.STRING)
     private EstadoReservacion estado;
 
     public Reservacion(){
